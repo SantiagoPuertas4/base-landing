@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-
+/* TODO NO MODIFICAR VARIABLES DE CSS A MANO, UTILIZAR CN SOBRE EL COMPONENTE YA GENERADO */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

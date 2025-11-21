@@ -1,3 +1,4 @@
+//TODO Adaptar segun la empresa y utilizar para rellenar otros archivos
 export const siteConfig = {
   name: "Nombre Landing",
   description: "Descripción corta de la landing.",
