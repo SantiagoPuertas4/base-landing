@@ -12,6 +12,22 @@
     "prepare": "husky",
     "fresh-install": "node scripts/fresh-install.js"
   },
+  "renovate": {
+    "rangeStrategy": "pin",
+    "minimumReleaseAge": "30 days",
+    "packageRules": [
+      {
+        "matchPackagePatterns": [
+          ".*"
+        ],
+        "stabilityDays": 30
+      }
+    ],
+    "labels": [
+      "deps"
+    ],
+    "dependencyDashboard": true
+  },
   "dependencies": {
     "@radix-ui/react-slot": "1.2.4",
     "class-variance-authority": "0.7.1",
