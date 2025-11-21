@@ -1,0 +1,4 @@
+#!/bin/sh
+pnpm lint
+pnpm prettier --check .
+pnpm build

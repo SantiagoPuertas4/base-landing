@@ -45,8 +45,8 @@ export function buildOrganizationSchema(input: OrganizationSchemaInput) {
     : undefined;
 
   return {
-    "@context": "https://schema.org",
-    "@type": "Organization",
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
     name: input.name,
     legalName: input.legalName ?? input.name,
     url: input.url,
@@ -57,13 +57,13 @@ export function buildOrganizationSchema(input: OrganizationSchemaInput) {
 
 export function buildLocalBusinessSchema(input: LocalBusinessSchemaInput) {
   const schema: Record<string, unknown> = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
     name: input.name,
     url: input.url,
     logo: input.logoUrl,
     address: {
-      "@type": "PostalAddress",
+      '@type': 'PostalAddress',
       streetAddress: input.streetAddress,
       addressLocality: input.addressLocality,
       addressRegion: input.addressRegion,
@@ -76,7 +76,7 @@ export function buildLocalBusinessSchema(input: LocalBusinessSchemaInput) {
   if (input.priceRange) schema.priceRange = input.priceRange;
   if (input.geoLatitude && input.geoLongitude) {
     schema.geo = {
-      "@type": "GeoCoordinates",
+      '@type': 'GeoCoordinates',
       latitude: input.geoLatitude,
       longitude: input.geoLongitude,
     };
@@ -90,17 +90,17 @@ export function buildLocalBusinessSchema(input: LocalBusinessSchemaInput) {
 
 export function buildWebSiteSchema(input: WebSiteSchemaInput) {
   const schema: Record<string, unknown> = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
     name: input.name,
     url: input.url,
   };
 
   if (input.potentialActionSearchUrl) {
     schema.potentialAction = {
-      "@type": "SearchAction",
+      '@type': 'SearchAction',
       target: `${input.potentialActionSearchUrl}{search_term_string}`,
-      "query-input": "required name=search_term_string",
+      'query-input': 'required name=search_term_string',
     };
   }
 

@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { localBusinessConfig, organizationConfig, webSiteConfig } from './_config/site';
+import {
+  localBusinessConfig,
+  organizationConfig,
+  webSiteConfig,
+} from './_config/site';
 import { JsonLd } from './_config/JsonLd';
 
 const geistSans = Geist({
@@ -25,24 +29,24 @@ const geistMono = Geist_Mono({
 // Utilizar etiquetas aria para mayor SEO y accesibilidad
 // Utilizar Server Components siempre que sea posible para optimizar rendimiento
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tudominio.com"),
+  metadataBase: new URL('https://tudominio.com'),
   title: {
-    default: "Nombre de tu marca",
-    template: "%s | Nombre de tu marca",
+    default: 'Nombre de tu marca',
+    template: '%s | Nombre de tu marca',
   },
-  description: "Texto corto que explique claramente tu propuesta de valor.",
+  description: 'Texto corto que explique claramente tu propuesta de valor.',
   openGraph: {
-    title: "Nombre de tu marca",
-    description: "Texto de descripción para cuando compartan el link.",
-    url: "https://tudominio.com",
-    siteName: "Nombre de tu marca",
-    locale: "es_AR",
-    type: "website",
+    title: 'Nombre de tu marca',
+    description: 'Texto de descripción para cuando compartan el link.',
+    url: 'https://tudominio.com',
+    siteName: 'Nombre de tu marca',
+    locale: 'es_AR',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Nombre de tu marca",
-    description: "Descripción pensada para Twitter/X.",
+    card: 'summary_large_image',
+    title: 'Nombre de tu marca',
+    description: 'Descripción pensada para Twitter/X.',
   },
   robots: {
     index: true,
@@ -55,7 +59,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log("renderizando server...");
+  console.log('renderizando server...');
   return (
     <html lang="es-AR">
       <body

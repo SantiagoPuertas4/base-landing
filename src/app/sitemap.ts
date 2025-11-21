@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next';
 
 //TODO Adaptar segun la empresa
 // Es un listado estructurado de todas las URLs importantes del sitio.
@@ -7,25 +7,25 @@ import { MetadataRoute } from "next";
 // -Indicar prioridad de páginas o frecuencia de actualización.
 // -Indispensable si tu sitio tiene contenido dinámico.
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://TU_DOMINIO.com";
+  const baseUrl = 'https://TU_DOMINIO.com';
 
   return [
     {
       url: `${baseUrl}/`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: 'monthly',
       priority: 1,
     },
     {
       url: `${baseUrl}/servicios`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contacto`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: 'monthly',
       priority: 0.7,
     },
   ];

@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next';
 
 //TODO Adaptar segun la empresa
 //Es un archivo que le indica a los bots (Google, Bing, etc.) qué partes de tu sitio pueden o no pueden indexar.
@@ -10,12 +10,12 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: "*",
-        allow: "/",
-        disallow: ["/admin", "/dashboard", "/api"],
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/admin', '/dashboard', '/api'],
       },
     ],
-    sitemap: "https://TU_DOMINIO.com/sitemap.xml",
-    host: "https://TU_DOMINIO.com",
+    sitemap: 'https://TU_DOMINIO.com/sitemap.xml',
+    host: 'https://TU_DOMINIO.com',
   };
 }

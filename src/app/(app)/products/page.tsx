@@ -6,5 +6,5 @@
 // Utilizar etiquetas aria para mayor SEO y accesibilidad
 // Utilizar Server Components siempre que sea posible para optimizar rendimiento
 export default function Page() {
-  return <h1>Hello Next.js!</h1>
+  return <h1>Hello Next.js!</h1>;
 }
